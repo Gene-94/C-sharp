@@ -1,0 +1,10 @@
+To use classes and namespaces from other projects in VS code include a reference
+to the given project in the .csproj file in the following way
+
+<ItemGroup>
+    <ProjectReference  Include="path to the project you want to include" />
+</ItemGroup>
+
+
+##############################################################################
+
