@@ -1,0 +1,2 @@
+Why do I get " Ambiguity between 'Person.Name' and 'Person.Name' " when using the property? 
+(It's just a waring tough)
