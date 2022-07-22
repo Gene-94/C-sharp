@@ -7,4 +7,10 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference  Include="/home/yevheniy/Programas/C#/Exercices/Ex_3_1_a/Ex_3-1-a.csproj" />
+  </ItemGroup>
+
+
+
 </Project>

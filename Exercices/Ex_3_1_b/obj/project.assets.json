@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    "net6.0": {}
+    "net6.0": {
+      "Ex_3-1-a/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/Ex_3-1-a.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Ex_3-1-a.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "Ex_3-1-a/1.0.0": {
+      "type": "project",
+      "path": "../Ex_3_1_a/Ex_3-1-a.csproj",
+      "msbuildProject": "../Ex_3_1_a/Ex_3-1-a.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net6.0": []
+    "net6.0": [
+      "Ex_3-1-a >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "/home/yevheniy/.nuget/packages/": {}
@@ -31,7 +50,11 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "/home/yevheniy/Programas/C#/Exercices/Ex_3_1_a/Ex_3-1-a.csproj": {
+              "projectPath": "/home/yevheniy/Programas/C#/Exercices/Ex_3_1_a/Ex_3-1-a.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

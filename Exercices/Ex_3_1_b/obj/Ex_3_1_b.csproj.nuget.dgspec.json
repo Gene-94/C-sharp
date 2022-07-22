@@ -4,6 +4,72 @@
     "/home/yevheniy/Programas/C#/Exercices/Ex_3_1_b/Ex_3_1_b.csproj": {}
   },
   "projects": {
+    "/home/yevheniy/Programas/C#/Exercices/Ex_3_1_a/Ex_3-1-a.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/yevheniy/Programas/C#/Exercices/Ex_3_1_a/Ex_3-1-a.csproj",
+        "projectName": "Ex_3-1-a",
+        "projectPath": "/home/yevheniy/Programas/C#/Exercices/Ex_3_1_a/Ex_3-1-a.csproj",
+        "packagesPath": "/home/yevheniy/.nuget/packages/",
+        "outputPath": "/home/yevheniy/Programas/C#/Exercices/Ex_3_1_a/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/yevheniy/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[6.0.6, 6.0.6]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.linux-x64",
+              "version": "[6.0.6, 6.0.6]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[6.0.6, 6.0.6]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.301/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "/home/yevheniy/Programas/C#/Exercices/Ex_3_1_b/Ex_3_1_b.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -25,7 +91,11 @@
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "/home/yevheniy/Programas/C#/Exercices/Ex_3_1_a/Ex_3-1-a.csproj": {
+                "projectPath": "/home/yevheniy/Programas/C#/Exercices/Ex_3_1_a/Ex_3-1-a.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
