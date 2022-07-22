@@ -26,7 +26,9 @@ class Program
         Console.Write("Have you lived in {0} for all of the {1} years?\n>", person.Address, person.Age);
         Console.ReadLine();
         Console.WriteLine("Ohh, okay.");
-        Console.WriteLine("\nIt was nice to meet you {0}. Bye", person.Name);
+        Console.WriteLine("\nIt was nice to meet you {0}.", person.Name);
+        Thread.Sleep(3500);
+        Console.WriteLine("Bye!");
 
     }
 }
