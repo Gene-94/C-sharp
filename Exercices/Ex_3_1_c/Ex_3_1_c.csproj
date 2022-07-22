@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="../Ex_3_1_b/Ex_3_1_b.csproj" />
+    <ProjectReference Include="../Ex_3_1_a/Ex_3-1-a.csproj" />
+  </ItemGroup>
+
+</Project>

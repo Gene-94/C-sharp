@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "k2vE9bx+rgiZXlMQ8atSb9yH2ZHi5UoroIGTiCewg7mbqKYSKEgDQ8m/8B3Dthoh2ssB2S9P6L3hiKN3CsAwAw==",
+  "success": true,
+  "projectFilePath": "/home/yevheniy/Programas/C#/Exercices/Ex_3_1_c/Ex_3_1_c.csproj",
+  "expectedPackageFiles": [
+    "/home/yevheniy/.nuget/packages/microsoft.netcore.app.ref/6.0.6/microsoft.netcore.app.ref.6.0.6.nupkg.sha512",
+    "/home/yevheniy/.nuget/packages/microsoft.aspnetcore.app.ref/6.0.6/microsoft.aspnetcore.app.ref.6.0.6.nupkg.sha512",
+    "/home/yevheniy/.nuget/packages/microsoft.netcore.app.host.linux-x64/6.0.6/microsoft.netcore.app.host.linux-x64.6.0.6.nupkg.sha512"
+  ],
+  "logs": []
+}
