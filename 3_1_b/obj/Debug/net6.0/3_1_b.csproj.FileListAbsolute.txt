@@ -1,5 +1,0 @@
-/home/yevheniy/Programas/C#/3_1_b/obj/Debug/net6.0/3_1_b.csproj.AssemblyReference.cache
-/home/yevheniy/Programas/C#/3_1_b/obj/Debug/net6.0/3_1_b.GeneratedMSBuildEditorConfig.editorconfig
-/home/yevheniy/Programas/C#/3_1_b/obj/Debug/net6.0/3_1_b.AssemblyInfoInputs.cache
-/home/yevheniy/Programas/C#/3_1_b/obj/Debug/net6.0/3_1_b.AssemblyInfo.cs
-/home/yevheniy/Programas/C#/3_1_b/obj/Debug/net6.0/3_1_b.csproj.CoreCompileInputs.cache
