@@ -27,6 +27,31 @@ namespace Ex_3_3
             Console.Write("The total sum of your numbers is {0}\n\n", total);
         }
 
+        public void swapfloats(){
+            float num1, num2, holder;
+            Console.WriteLine("We are gonna do a magic trick and swap two floating point numbers!");
+            Console.Write("Insert value of float 1: ");
+            while(true){
+                if(float.TryParse(Console.ReadLine(), out num1)){
+                    break;
+                }
+            }
+            Console.Write("Insert value of float 2: ");
+            while(true){
+                if(float.TryParse(Console.ReadLine(), out num2)){
+                    break;
+                }
+            }
+            holder = num1;
+            num1 = num2;
+            num2 = holder;
+            Console.WriteLine("And now...");
+            Thread.Sleep(2000);
+            Console.WriteLine("The float in hat 1 will magically switch places with the float in hat 2...");
+            Thread.Sleep(2500);
+            Console.WriteLine("TAAADAANN !\nThe value of float 1 is now {0} and the value of float 2 is {1}.", num1, num2);
+        }
+
 
 
     }
