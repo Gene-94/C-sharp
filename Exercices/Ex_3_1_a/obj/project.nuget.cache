@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "H1+d0CXpNdLY3m71WwgSbxDEz/hYSQsqkDbaYh7doI9R6qu1ebERQCMAa44YIF9B/Wb5ZAmaGRjNkF9k9pfZtQ==",
+  "dgSpecHash": "HC//N8UIAjRifzjIWmnDh8LLbEX96WlqWxdh3mAi+HFh9lcwcPM7kwqRbdVie/I77kmXQdEs68CQVcoteaIISw==",
   "success": true,
-  "projectFilePath": "/home/yevheniy/Programas/C#/Exercices/Ex_3-1-a/Ex_3-1-a.csproj",
+  "projectFilePath": "/home/yevheniy/Programas/C#/Exercices/Ex_3_1_a/Ex_3-1-a.csproj",
   "expectedPackageFiles": [
     "/home/yevheniy/.nuget/packages/microsoft.netcore.app.ref/6.0.6/microsoft.netcore.app.ref.6.0.6.nupkg.sha512",
     "/home/yevheniy/.nuget/packages/microsoft.aspnetcore.app.ref/6.0.6/microsoft.aspnetcore.app.ref.6.0.6.nupkg.sha512",
