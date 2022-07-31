@@ -1,0 +1,15 @@
+/home/yevheniy/Programas/C#/Exercices/Ex_5_1/obj/Debug/net6.0/Ex_5_1.csproj.AssemblyReference.cache
+/home/yevheniy/Programas/C#/Exercices/Ex_5_1/obj/Debug/net6.0/Ex_5_1.GeneratedMSBuildEditorConfig.editorconfig
+/home/yevheniy/Programas/C#/Exercices/Ex_5_1/obj/Debug/net6.0/Ex_5_1.AssemblyInfoInputs.cache
+/home/yevheniy/Programas/C#/Exercices/Ex_5_1/obj/Debug/net6.0/Ex_5_1.AssemblyInfo.cs
+/home/yevheniy/Programas/C#/Exercices/Ex_5_1/obj/Debug/net6.0/Ex_5_1.csproj.CoreCompileInputs.cache
+/home/yevheniy/Programas/C#/Exercices/Ex_5_1/bin/Debug/net6.0/Ex_5_1
+/home/yevheniy/Programas/C#/Exercices/Ex_5_1/bin/Debug/net6.0/Ex_5_1.deps.json
+/home/yevheniy/Programas/C#/Exercices/Ex_5_1/bin/Debug/net6.0/Ex_5_1.runtimeconfig.json
+/home/yevheniy/Programas/C#/Exercices/Ex_5_1/bin/Debug/net6.0/Ex_5_1.dll
+/home/yevheniy/Programas/C#/Exercices/Ex_5_1/bin/Debug/net6.0/Ex_5_1.pdb
+/home/yevheniy/Programas/C#/Exercices/Ex_5_1/obj/Debug/net6.0/Ex_5_1.dll
+/home/yevheniy/Programas/C#/Exercices/Ex_5_1/obj/Debug/net6.0/refint/Ex_5_1.dll
+/home/yevheniy/Programas/C#/Exercices/Ex_5_1/obj/Debug/net6.0/Ex_5_1.pdb
+/home/yevheniy/Programas/C#/Exercices/Ex_5_1/obj/Debug/net6.0/Ex_5_1.genruntimeconfig.cache
+/home/yevheniy/Programas/C#/Exercices/Ex_5_1/obj/Debug/net6.0/ref/Ex_5_1.dll
