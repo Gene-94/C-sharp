@@ -10,10 +10,11 @@ class Program
         Console.WriteLine("- when you're done just type ' exit '");
         do{
             int i=1;
+            string? inpt;
 
             Console.Write("Age for student nrº{0}: ",i);
             try{
-                string? inpt = Console.ReadLine();
+                inpt = Console.ReadLine();
                 ages.Add(int.Parse(inpt)); 
                 i++;
             }
