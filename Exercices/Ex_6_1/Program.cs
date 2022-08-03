@@ -8,13 +8,13 @@ class Program
         Console.WriteLine("# Help to fill the ages of a programing course students. #");
         Console.WriteLine("- If there's a student whose age you're not sure about just take your best guess");
         Console.WriteLine("- when you're done just type ' exit '");
-        while(true){
+        
+        for(int i=0;true; i=i){
             string? inpt=null;
-            int i=0;
-            Console.Write($"Age for student nrº{i+1}: ");
+            Console.Write("Age for student nrº{0}: ", i);
             try{
                 inpt = Console.ReadLine();
-                if(inpt.ToLower() == "exit" || inpt.ToLower() == "end" || inpt.ToLower() == "finished")
+                if(inpt!=null && (inpt.ToLower() == "exit" || inpt.ToLower() == "end" || inpt.ToLower() == "finished"))
                     break;
                 ages.Add(int.Parse(inpt));
                 i++; 
