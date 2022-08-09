@@ -1,0 +1,15 @@
+/home/yevheniy/Programas/C#/Exercices/stand_stock/obj/Debug/net6.0/stand_stock.csproj.AssemblyReference.cache
+/home/yevheniy/Programas/C#/Exercices/stand_stock/obj/Debug/net6.0/stand_stock.GeneratedMSBuildEditorConfig.editorconfig
+/home/yevheniy/Programas/C#/Exercices/stand_stock/obj/Debug/net6.0/stand_stock.AssemblyInfoInputs.cache
+/home/yevheniy/Programas/C#/Exercices/stand_stock/obj/Debug/net6.0/stand_stock.AssemblyInfo.cs
+/home/yevheniy/Programas/C#/Exercices/stand_stock/obj/Debug/net6.0/stand_stock.csproj.CoreCompileInputs.cache
+/home/yevheniy/Programas/C#/Exercices/stand_stock/bin/Debug/net6.0/stand_stock
+/home/yevheniy/Programas/C#/Exercices/stand_stock/bin/Debug/net6.0/stand_stock.deps.json
+/home/yevheniy/Programas/C#/Exercices/stand_stock/bin/Debug/net6.0/stand_stock.runtimeconfig.json
+/home/yevheniy/Programas/C#/Exercices/stand_stock/bin/Debug/net6.0/stand_stock.dll
+/home/yevheniy/Programas/C#/Exercices/stand_stock/bin/Debug/net6.0/stand_stock.pdb
+/home/yevheniy/Programas/C#/Exercices/stand_stock/obj/Debug/net6.0/stand_stock.dll
+/home/yevheniy/Programas/C#/Exercices/stand_stock/obj/Debug/net6.0/refint/stand_stock.dll
+/home/yevheniy/Programas/C#/Exercices/stand_stock/obj/Debug/net6.0/stand_stock.pdb
+/home/yevheniy/Programas/C#/Exercices/stand_stock/obj/Debug/net6.0/stand_stock.genruntimeconfig.cache
+/home/yevheniy/Programas/C#/Exercices/stand_stock/obj/Debug/net6.0/ref/stand_stock.dll

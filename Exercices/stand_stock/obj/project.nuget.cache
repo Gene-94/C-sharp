@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "p7K606NV8iMjKv+50SqEREWlFbrlL0C3B07eVakh5MNAKQr1JK6j/ENRSyqCNfsQF2QxYcucsUKUsmayo9Y09g==",
+  "dgSpecHash": "sgL/kqU7y1+Djsq8cBiyWY8sUOZW1tCwsLZgIB9snaF140kW/m3SHXvC9QLYZ4Jd9wWMRIYO5M9Q+SdjKbvULA==",
   "success": true,
   "projectFilePath": "/home/yevheniy/Programas/C#/Exercices/stand_stock/stand_stock.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "/home/yevheniy/.nuget/packages/microsoft.netcore.app.ref/6.0.7/microsoft.netcore.app.ref.6.0.7.nupkg.sha512",
+    "/home/yevheniy/.nuget/packages/microsoft.aspnetcore.app.ref/6.0.7/microsoft.aspnetcore.app.ref.6.0.7.nupkg.sha512",
+    "/home/yevheniy/.nuget/packages/microsoft.netcore.app.host.linux-x64/6.0.7/microsoft.netcore.app.host.linux-x64.6.0.7.nupkg.sha512"
+  ],
   "logs": []
 }
