@@ -8,12 +8,18 @@ class Program
     static void Main(string[] args)
     {
         
-        FileStream fs = new FileStream("stock.csv", FileMode.Open, FileAccess.ReadWrite);
+        using (FileStream fs = File.Create("test_file.txt")){
+            AddText(fs, "Line 1\n");
+            AddText(fs, "Line 2\n");
+            AddText(fs, "Another great line\n");
+            AddText(fs, "This block is on a new line");
+            AddText(fs, ", but this is not.");
 
-        //string? message = "test";
+        }
+    }
 
-        byte[] message = new UTF8Encoding(true).GetBytes("test");
-        fs.Write(message);
-        fs.Close();
+    private static void AddText(FileStream fs, string msg){
+        byte[] byte_msg = new UTF8Encoding(true).GetBytes(msg);
+        fs.Write(byte_msg);
     }
 }
