@@ -21,7 +21,7 @@ namespace stand_stock
         public void GetInfo(int index){
             // When passing I will be working with car numbers, so I will pass (int carNumber-1)
             if(index<0){Console.Write("Invalid index!");}
-            else if(index>=cars.Count){Console.Write($"There aren't that many cars yet. At the moment there are {cars.Count}");}
+            else if(index>=cars.Count){Console.Write($"There aren't that many cars yet. At the moment there are {cars.Count} cars.");}
             else if(index<cars.Count){
                 Console.WriteLine("\n######################");
                 Console.WriteLine($"\tCar nrº{index+1} ");
@@ -39,7 +39,25 @@ namespace stand_stock
             }else{Console.WriteLine("SOLD OUT! No cars availble");}
         }
 
-        private void ImportStockList(string path){
+        public void SellCar(){
+            while(true){
+                Console.WriteLine("What is the number of the car you want to get?");
+                Console.Write(">> ");
+                try{
+                    int carNr = int.Parse(Console.ReadLine());
+                    cars.RemoveAt(carNr-1);
+                    break;
+                }
+                catch (ArgumentOutOfRangeException){
+                    Console.WriteLine("Inserted car number does not exist. \nMake sure the car with can number desired is still availble by listing our collection");
+                }
+                catch (Exception e) when (e is ArgumentNullException || e is FormatException || e is OverflowException){
+                    Console.WriteLine("That is not a valid car number.");
+                }
+            }
+        }
+
+        public void ImportStockList(string path){
             // Imports a list of veicules from a csv file
             // Can be used to inicialize the class or to just add more veicules to it
             Reader import = new Reader(path);
@@ -47,5 +65,7 @@ namespace stand_stock
             //import.Load() needs to return a list of type Car
             cars.AddRange(import.Load());
         }
+
+
     }
 }
