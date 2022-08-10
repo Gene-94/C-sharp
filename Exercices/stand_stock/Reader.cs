@@ -19,9 +19,14 @@ namespace stand_stock
         public List<Car> Load(){
 
             List<Car>? newStock = new List<Car>();
-            StreamReader reader = new(path);
+            StreamReader reader = new("stock.csv");
+            try{
+                reader = new(path);
+            }
+            catch (Exception e) when (e is FileNotFoundException || e is DirectoryNotFoundException){
+                return null;
+            }
 
-            
             
             for(int i=1; true; i++){
                 string? buff=reader.ReadLine();
@@ -44,6 +49,18 @@ namespace stand_stock
             }
 
             return newStock;
+        }
+
+        public void SaveToFile(List<Car> stock, string path){
+
+            StreamWriter writer = new(path, true);
+
+            for(int i=0; i<stock.Count; i++){
+                string line = stock[i].Brand + ";" + stock[i].Model + ";" + stock[i].Year ;
+                writer.WriteLine(line);
+            }
+            writer.Close();
+
         }
     
     }

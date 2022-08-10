@@ -63,7 +63,18 @@ namespace stand_stock
             Reader import = new Reader(path);
 
             //import.Load() needs to return a list of type Car
-            cars.AddRange(import.Load());
+            try{
+                cars.AddRange(import.Load());
+            }
+            catch (ArgumentNullException){
+                Console.WriteLine("Your collection is empty or does not exist...");
+            }
+        }
+
+        public void PrintStock(string path){
+            Reader export = new Reader(path);
+
+            export.SaveToFile(cars, path);
         }
 
 
