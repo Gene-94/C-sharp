@@ -30,9 +30,8 @@ namespace stand_stock
                 buff.Trim();
                 string [] tokens = buff.Split(';');
 
-                Car newCar;
+                Car newCar = new Car(tokens[0], tokens[1], 0);
                 Action<Exception> ParseHandler = (e) => {
-                    newCar = new Car(tokens[0], tokens[1], 0);
                     Console.WriteLine($"Incurred into a missing or poorly formatted date on line {i}, therefore setting it to 0");
                 };
                 try{
@@ -41,7 +40,7 @@ namespace stand_stock
                 catch (ArgumentNullException e){ParseHandler(e);}
                 catch (FormatException e){ParseHandler(e);}
                 catch (OverflowException e){ParseHandler(e);}
-                newStock.Add(newCar);
+                finally{newStock.Add(newCar);}
             }
 
             return newStock;
