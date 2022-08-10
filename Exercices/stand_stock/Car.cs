@@ -11,10 +11,12 @@ namespace stand_stock
     {
         public string Brand{get;private set;}
         public string Model{get;private set;}
-        public int Year{get;private set;}
+        public int Year{get; private set;}
 
-        Car(string brand, string model, string year){
-           Year = Int32.TryParse(year);
+        public Car(string brand, string model, int year){
+            this.Brand = brand;
+            this.Model = model;
+            this.Year = year;
         }
     }
 }

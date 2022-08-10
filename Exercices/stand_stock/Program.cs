@@ -7,7 +7,8 @@ class Program
 {
     static void Main(string[] args)
     {
-        
-        using (FileStream fs = new FileStream("test_file.txt", FileMode.Open, FileAccess.ReadWrite)){
+           Cars stand = new("stock copy.csv");
+           stand.ListStock();
+    }
 
 }
