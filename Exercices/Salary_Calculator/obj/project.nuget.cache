@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "Ech4inBvU/3V++7NbMonbsdJGyestyejm3V6f8NQuT6CWG6ft5xz5TLC3DJmin+Jk9QpeACTZcdhHx0eCdMPpg==",
+  "dgSpecHash": "XQjkv6l2bpg+5tIzBiUPgAJcxsiMugMxuc5iRhQlpb0SmqiPLgQfjbwkf8Wkv+PCYrmEfSRD8B5Gpqgdu+4PkA==",
   "success": true,
   "projectFilePath": "/home/yevheniy/Programas/C#/Exercices/Salary_Calculator/Salary_Calculator.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "/home/yevheniy/.nuget/packages/microsoft.netcore.app.ref/6.0.7/microsoft.netcore.app.ref.6.0.7.nupkg.sha512",
+    "/home/yevheniy/.nuget/packages/microsoft.aspnetcore.app.ref/6.0.7/microsoft.aspnetcore.app.ref.6.0.7.nupkg.sha512",
+    "/home/yevheniy/.nuget/packages/microsoft.netcore.app.host.linux-x64/6.0.7/microsoft.netcore.app.host.linux-x64.6.0.7.nupkg.sha512"
+  ],
   "logs": []
 }

@@ -1,0 +1,15 @@
+/home/yevheniy/Programas/C#/Exercices/Salary_Calculator/bin/Debug/net6.0/Salary_Calculator
+/home/yevheniy/Programas/C#/Exercices/Salary_Calculator/bin/Debug/net6.0/Salary_Calculator.deps.json
+/home/yevheniy/Programas/C#/Exercices/Salary_Calculator/bin/Debug/net6.0/Salary_Calculator.runtimeconfig.json
+/home/yevheniy/Programas/C#/Exercices/Salary_Calculator/bin/Debug/net6.0/Salary_Calculator.dll
+/home/yevheniy/Programas/C#/Exercices/Salary_Calculator/bin/Debug/net6.0/Salary_Calculator.pdb
+/home/yevheniy/Programas/C#/Exercices/Salary_Calculator/obj/Debug/net6.0/Salary_Calculator.csproj.AssemblyReference.cache
+/home/yevheniy/Programas/C#/Exercices/Salary_Calculator/obj/Debug/net6.0/Salary_Calculator.GeneratedMSBuildEditorConfig.editorconfig
+/home/yevheniy/Programas/C#/Exercices/Salary_Calculator/obj/Debug/net6.0/Salary_Calculator.AssemblyInfoInputs.cache
+/home/yevheniy/Programas/C#/Exercices/Salary_Calculator/obj/Debug/net6.0/Salary_Calculator.AssemblyInfo.cs
+/home/yevheniy/Programas/C#/Exercices/Salary_Calculator/obj/Debug/net6.0/Salary_Calculator.csproj.CoreCompileInputs.cache
+/home/yevheniy/Programas/C#/Exercices/Salary_Calculator/obj/Debug/net6.0/Salary_Calculator.dll
+/home/yevheniy/Programas/C#/Exercices/Salary_Calculator/obj/Debug/net6.0/refint/Salary_Calculator.dll
+/home/yevheniy/Programas/C#/Exercices/Salary_Calculator/obj/Debug/net6.0/Salary_Calculator.pdb
+/home/yevheniy/Programas/C#/Exercices/Salary_Calculator/obj/Debug/net6.0/Salary_Calculator.genruntimeconfig.cache
+/home/yevheniy/Programas/C#/Exercices/Salary_Calculator/obj/Debug/net6.0/ref/Salary_Calculator.dll

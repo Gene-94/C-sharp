@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Globalization;
 
 namespace Salary_Calculator
 {
@@ -19,18 +20,19 @@ namespace Salary_Calculator
             }
         }
 
-        private int hourlyRate=5;
+        private float hourlyRate=5;
+        
 
+        private float CalculatePay() => (HoursWorked * hourlyRate);
+        
         public void PrintMessage() {
-            Console.WriteLine("Calculating Pay...");
+            //Console.WriteLine($"Calculating Pay{Thread.Sleep(1500)}.{Thread.Sleep(1500)}.{Thread.Sleep(1500)}.");
+            Console.WriteLine("Calculating amount...");
+            Task.Delay(3000);
+    
+            CultureInfo.CurrentCulture = new CultureInfo("pt-PT");
+            Console.WriteLine($"Your salary is {CalculatePay():C}");
         }
 
-        public int CalculatePay(){
-            PrintMessage();
-
-            int staffPay = HoursWorked * hourlyRate;
-
-            return staffPay;
-        }
     }
 }

@@ -17,7 +17,7 @@ class Program
 
         calc.HoursWorked = hours;
 
-        income = calc.CalculatePay();
+        calc.PrintMessage();
         
     }
 }
