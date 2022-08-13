@@ -2,14 +2,13 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.IO;
 
 namespace ClientManagmentSystem
 {
     public class Adapter
     {
         //read file with all client info for import
-
-
 
 
         //write to file with client info for update
@@ -37,6 +36,40 @@ namespace ClientManagmentSystem
             //2;22/08/2022 10:44:31;-2.50
 
         // include option to filter operations bu DateTime (options 8 & 9 on the Menu)
+
+
+        private string CLIENTS_FILE = "clients_0.csv";
+
+        public List<Client>? LoadList(){
+            // return a complete client list loaded from csv file     
+            List<Client>? storedClients = new List<Client>();
+
+            try{
+                StreamReader reader = new(CLIENTS_FILE);
+                foreach (LinkedList in reader.ReadLine()){
+                    
+                }
+
+            }
+            catch (UnauthorizedAccessException){
+                Console.WriteLine("Not enough permitions to read the file. Run this program with the correct privileges to get access to file");
+            }
+            catch (Exception e) when (e is FileNotFoundException || e is DirectoryNotFoundException){
+                Console.WriteLine($"The file '{Path.GetFileName(CLIENTS_FILE)}' was not found in {Path.GetDirectoryName(Path.GetFullPath(CLIENTS_FILE))}");
+                Console.WriteLine("Check if file exists, has the right name and extension, as well that it is located in the specified directory.");
+                while(true){
+                    Console.Write("\nDo you wish to proceed with an empty client list? (Yes/No): ");
+                    string? opt = Console.ReadLine();
+                    if(string.IsNullOrWhiteSpace(opt))
+                        continue;
+                    else if(opt.ToLower() == "no" || opt.ToLower() == "n")
+                        Environment.Exit(9);
+                    else if(opt.ToLower() != "yes" || opt.ToLower() == "y")
+                        break;
+                }
+            }
+            return storedClients;
+        }
 
     }
 }
