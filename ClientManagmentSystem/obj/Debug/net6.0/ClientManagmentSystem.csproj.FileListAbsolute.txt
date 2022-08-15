@@ -1,0 +1,15 @@
+/home/yevheniy/Programas/C#/ClientManagmentSystem/bin/Debug/net6.0/ClientManagmentSystem
+/home/yevheniy/Programas/C#/ClientManagmentSystem/bin/Debug/net6.0/ClientManagmentSystem.deps.json
+/home/yevheniy/Programas/C#/ClientManagmentSystem/bin/Debug/net6.0/ClientManagmentSystem.runtimeconfig.json
+/home/yevheniy/Programas/C#/ClientManagmentSystem/bin/Debug/net6.0/ClientManagmentSystem.dll
+/home/yevheniy/Programas/C#/ClientManagmentSystem/bin/Debug/net6.0/ClientManagmentSystem.pdb
+/home/yevheniy/Programas/C#/ClientManagmentSystem/obj/Debug/net6.0/ClientManagmentSystem.csproj.AssemblyReference.cache
+/home/yevheniy/Programas/C#/ClientManagmentSystem/obj/Debug/net6.0/ClientManagmentSystem.GeneratedMSBuildEditorConfig.editorconfig
+/home/yevheniy/Programas/C#/ClientManagmentSystem/obj/Debug/net6.0/ClientManagmentSystem.AssemblyInfoInputs.cache
+/home/yevheniy/Programas/C#/ClientManagmentSystem/obj/Debug/net6.0/ClientManagmentSystem.AssemblyInfo.cs
+/home/yevheniy/Programas/C#/ClientManagmentSystem/obj/Debug/net6.0/ClientManagmentSystem.csproj.CoreCompileInputs.cache
+/home/yevheniy/Programas/C#/ClientManagmentSystem/obj/Debug/net6.0/ClientManagmentSystem.dll
+/home/yevheniy/Programas/C#/ClientManagmentSystem/obj/Debug/net6.0/refint/ClientManagmentSystem.dll
+/home/yevheniy/Programas/C#/ClientManagmentSystem/obj/Debug/net6.0/ClientManagmentSystem.pdb
+/home/yevheniy/Programas/C#/ClientManagmentSystem/obj/Debug/net6.0/ClientManagmentSystem.genruntimeconfig.cache
+/home/yevheniy/Programas/C#/ClientManagmentSystem/obj/Debug/net6.0/ref/ClientManagmentSystem.dll

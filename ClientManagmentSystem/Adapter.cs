@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.IO;
+using System.Globalization;
 
 namespace ClientManagmentSystem
 {
@@ -38,16 +39,30 @@ namespace ClientManagmentSystem
         // include option to filter operations bu DateTime (options 8 & 9 on the Menu)
 
 
-        private string CLIENTS_FILE = "clients_0.csv";
+        private string CLIENTS_FILE = "clients.csv";
 
         public List<Client>? LoadList(){
             // return a complete client list loaded from csv file     
             List<Client>? storedClients = new List<Client>();
 
             try{
-                StreamReader reader = new(CLIENTS_FILE);
-                foreach (LinkedList in reader.ReadLine()){
-                    
+                foreach (string line in File.ReadLines(CLIENTS_FILE)){
+                    string[] tokens = line.Split(';');
+                    float credit = float.Parse(tokens[9]);
+                    DateTime credExp = DateTime.ParseExact(tokens[10], "dd/MM/yyyy HH:mm:ss", CultureInfo.InvariantCulture);
+                    storedClients.Add(new Client(
+                        int.Parse(tokens[0]),
+                        tokens[1]=="true",
+                        tokens[2],
+                        tokens[3],
+                        tokens[4],
+                        tokens[5],
+                        tokens[6],
+                        tokens[7],
+                        tokens[8],
+                        credit,
+                        credExp
+                    ));
                 }
 
             }

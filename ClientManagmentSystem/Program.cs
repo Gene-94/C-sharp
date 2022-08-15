@@ -3,7 +3,8 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello, World!");
+        Client_List clients = new Client_List();
+        clients.listAll();
 
         // # Menu #
 
