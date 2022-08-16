@@ -23,26 +23,28 @@ class Program
             9- listar consumos de um cliente
             10- Adicionar viagem (consumo)
             11- Adicionar carregamento
+
+            0- Sair
             ");
             Console.Write(">> ");
             string? opt = Console.ReadLine();
             switch(opt){
                 case "1":
-                // List all active clients
-                    //show:
-                    //Client Id
-                    //Name
-                    //Vat number
-                    //Availble credit
+                    // List all active clients
+                        //show:
+                        //Client Id
+                        //Name
+                        //Vat number
+                        //Availble credit
                     clients.ListAllActive();
                     break;
                 case "2":
-                // List all active client, with positive availble credit
-                    //show:
-                    //Client Id
-                    //Name
-                    //Availble credit value
-                    //Credit validity
+                    // List all active client, with positive availble credit
+                        //show:
+                        //Client Id
+                        //Name
+                        //Availble credit value
+                        //Credit validity
                     clients.ListPositiveCredit();
                     break;    
             
@@ -84,6 +86,8 @@ class Program
                 //Client Name (?) 
                 //Amount paid by the client
                 //DateTime of the payment
+                case "0":
+                    return;
                 case "list all":
                     clients.ListAll();
                     break;
