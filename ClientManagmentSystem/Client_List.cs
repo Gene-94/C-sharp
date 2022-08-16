@@ -22,14 +22,34 @@ namespace ClientManagmentSystem
             clients = file.LoadList();
         }
 
+        private void FilterActiveData(int[] lines, Client client){
+            // lines index reference:
+            // ID = 1, active = 2, name = 3, address = 4, postal = 5, city = 6, phone = 7, email = 8, vat = 9, credit = 10, validity = 11
+            string[] info = client.SplittedInfo();
+            if(client.Active){
+                foreach(int i in lines){
+                    Console.WriteLine(info[i]);
+                }
+            }
+        }
         // All functionalities presented in the menu go here
 
 
             // List all active clients
+        public void ListAllActive(){
+            foreach(Client client in clients){
+                FilterActiveData(new int[] {1,3,9,10}, client);
+            }
+        }
     
 
             // List all active client, with positive availble credit
-
+        public void ListPositiveCredit(){
+            foreach(Client client in clients){
+                if(client.Credit>0)
+                    FilterActiveData(new int[] {1,3,10,11}, client);
+            }
+        }
 
             // List all active clients with expired credit validity 
 
@@ -64,10 +84,15 @@ namespace ClientManagmentSystem
         // search option, allow to search client database by field
 
         // list all clients
-        public void listAll(){
+        public void ListAll(){
             foreach(Client client in clients){
-                client.PrintInfo();
+                Console.Write(client.FullInfo());
             }
+        }
+
+
+        public void Save(){
+            file.Save(clients);
         }
 
 

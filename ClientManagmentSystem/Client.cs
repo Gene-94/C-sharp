@@ -2,63 +2,73 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Globalization;
 
 namespace ClientManagmentSystem
 {
     public class Client
     {
+
+
         //Client ID -> array index +1
-        private int clientID;
+        public int ClientID{get; private set;}
+        // Active client bool field
+        public bool Active{get; private set;}
         //Name
-        private string name;
+        public string Name{get; private set;}
         //Address
-        private string address;
+        public string Address{get; private set;}
         //Postal code
-        private string postal;
+        public string Postal{get; private set;}
         //City
-        private string locale;
+        public string Locale{get; private set;}
         //Phone number
-        private string phone;
+        public string Phone{get; private set;}
         //Email
-        private string email;
+        public string Email{get; private set;}
         //VAT number
-        private string vat;
-        // Active bool field
-        private bool active;
+        public string Vat{get; private set;}
 
         //Current credit
-        private float credit;
+        public float Credit{get; private set;}
         //Credit validity
-        private DateTime creditExpiry;
+        public DateTime CreditExpiry{get; private set;}
 
         public Client(int clientID, bool active, string name, string address, string postal, string locale, string phone, string email, string vat, float credit, DateTime creditExpiry){
-            this.clientID = clientID;
-            this.active = active;
-            this.name = name;
-            this.address = address;
-            this.postal = postal;
-            this.locale = locale;
-            this.phone = phone;
-            this.email = email;
-            this.vat = vat;
-            this.credit = credit;
-            this.creditExpiry = creditExpiry;
+            this.ClientID = clientID;
+            this.Active = active;
+            this.Name = name;
+            this.Address = address;
+            this.Postal = postal;
+            this.Locale = locale;
+            this.Phone = phone;
+            this.Email = email;
+            this.Vat = vat;
+            this.Credit = credit;
+            this.CreditExpiry = creditExpiry;
         }
 
-        public void PrintInfo(){
-            Console.WriteLine(@$"
-                Número Cliente ......{clientID}
-                Ativo ...............{(active?"sim":"não")}
-                Nome ................{name}
-                Morada ..............{address}
-                Código Postal .......{postal}
-                Localidade ..........{locale}
-                Telefone ............{phone}
-                Email ...............{email}
-                No Contribuinte .....{vat}
-                Saldo Disponível ....{credit}
-                Data de Validade ....{creditExpiry}
-            ");
+        public string FullInfo(){
+            string clientInfo = (@$"
+                Número Cliente ......{ClientID}
+                Ativo ...............{(Active?"sim":"não")}
+                Nome ................{Name}
+                Morada ..............{Address}
+                Código Postal .......{Postal}
+                Localidade ..........{Locale}
+                Telefone ............{Phone}
+                Email ...............{Email}
+                No Contribuinte .....{Vat}
+                Saldo Disponível ....{(Credit!=-999?Credit:"Erro na leitura de credito"):C}
+                Data de Validade ....{(CreditExpiry==DateTime.MinValue?"Erro na leitura de validade":CreditExpiry)}{'\n'}");
+
+            return clientInfo;
+        }
+
+        public string[] SplittedInfo(){
+            string[] info = FullInfo().Split('\n');
+            //info = new string[] {info[1],info[2],info[3],info[4],info[5],info[6],info[7],info[8],info[9],info[10]}; --> this removes tabulation from "Name.." line for some reason.
+            return info; 
         }
 
 

@@ -48,8 +48,12 @@ namespace ClientManagmentSystem
             try{
                 foreach (string line in File.ReadLines(CLIENTS_FILE)){
                     string[] tokens = line.Split(';');
-                    float credit = float.Parse(tokens[9]);
-                    DateTime credExp = DateTime.ParseExact(tokens[10], "dd/MM/yyyy HH:mm:ss", CultureInfo.InvariantCulture);
+                    if(!float.TryParse(tokens[9], out float credit))
+                        if(!float.TryParse(tokens[9], NumberStyles.Any, CultureInfo.InvariantCulture, out credit))
+                            credit = -999;
+                    string[] styles = new[] {"dd/MM/yyyy HH:mm:ss", "MM/dd/yyyy HH:mm:ss p", "dd/MM/yyyy HH:mm", "MM/dd/yyyy HH:mm p"};
+                    if(!DateTime.TryParseExact(tokens[10], styles, CultureInfo.CurrentCulture, DateTimeStyles.AllowWhiteSpaces,  out DateTime credExp ))
+                        credExp = DateTime.MinValue;
                     storedClients.Add(new Client(
                         int.Parse(tokens[0]),
                         tokens[1]=="true",
@@ -84,6 +88,20 @@ namespace ClientManagmentSystem
                 }
             }
             return storedClients;
+        }
+
+
+        public void Save(List<Client> clientList){
+            
+            StreamWriter writer = new StreamWriter(CLIENTS_FILE, false);
+            foreach (Client client in clientList){
+                string buff="";
+                foreach(var property in client.GetType().GetProperties())
+                    buff = buff+property.GetValue(client, null) +";";
+                buff = buff.Remove(buff.Length -1,1);
+                writer.WriteLine(buff);
+            }
+            writer.Close();
         }
 
     }
