@@ -100,7 +100,9 @@ namespace ClientManagmentSystem
         }
 
             // Add a new client
-        public
+        public bool AddClient(){
+            return true;
+        }
 
             // Remove a client (make inactive)
 

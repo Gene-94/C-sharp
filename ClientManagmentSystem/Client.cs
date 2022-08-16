@@ -33,6 +33,7 @@ namespace ClientManagmentSystem
         public float Credit{get; private set;}
         //Credit validity
         public DateTime CreditExpiry{get; private set;}
+        
 
         public Client(int clientID, bool active, string name, string address, string postal, string locale, string phone, string email, string vat, float credit, DateTime creditExpiry){
             this.ClientID = clientID;

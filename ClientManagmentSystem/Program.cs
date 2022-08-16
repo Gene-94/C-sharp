@@ -69,14 +69,12 @@ class Program
                         //VAT number
                         //Current credit
                         //Credit validity
-                    int _id;
-                    while(true){
-                        Console.Write("\n\nInsira o id de cliente: ");
-                        if(int.TryParse(Console.ReadLine(), out _id))
-                            break;
-                    }
-                        
-            // Add a new client
+                    clients.IdInfo();
+                    break;
+                case "5":
+                    // Add a new client
+                    
+                    break;
             // Remove a client (make inactive)
             // Edit a client
             // List a clients balance sheet
