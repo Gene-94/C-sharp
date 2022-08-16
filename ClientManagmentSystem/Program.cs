@@ -47,25 +47,35 @@ class Program
                         //Credit validity
                     clients.ListPositiveCredit();
                     break;    
-            
-            // List all active clients with expired credit validity 
-                //show:
-                //Client Id
-                //Name
-                //Availble credit value
-                //For how long the credit has expired
-            // List a single client
-                //show:
-                //Client ID -> array index +1
-                //Name
-                //Address
-                //Postal code
-                //Locality
-                //Phone number
-                //Email
-                //VAT number
-                //Current credit
-                //Credit validity
+                case "3":
+                    // List all active clients with expired credit validity 
+                        //show:
+                        //Client Id
+                        //Name
+                        //Availble credit value
+                        //For how long the credit has expired
+                    clients.ListExpired();
+                    break;
+                case "4":
+                    // List a single client
+                        //show:
+                        //Client ID -> array index +1
+                        //Name
+                        //Address
+                        //Postal code
+                        //Locality
+                        //Phone number
+                        //Email
+                        //VAT number
+                        //Current credit
+                        //Credit validity
+                    int _id;
+                    while(true){
+                        Console.Write("\n\nInsira o id de cliente: ");
+                        if(int.TryParse(Console.ReadLine(), out _id))
+                            break;
+                    }
+                        
             // Add a new client
             // Remove a client (make inactive)
             // Edit a client
