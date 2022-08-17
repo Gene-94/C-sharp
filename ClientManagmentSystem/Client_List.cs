@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Text.RegularExpressions;
 
 namespace ClientManagmentSystem
 {
@@ -99,8 +100,71 @@ namespace ClientManagmentSystem
 
         }
 
-            // Add a new client
         public bool AddClient(){
+            // Add a new client
+            // validate input field with regex
+            while(true){
+                Console.Write("Insira o nome do cliente: ");
+                string name = Console.ReadLine();
+                if(!string.IsNullOrWhiteSpace(name))
+                    break;
+            }
+
+            while(true){
+                Console.Write("Insira a morada do cliente: ");
+                string addr = Console.ReadLine();
+                if(!string.IsNullOrWhiteSpace(addr))
+                    break;
+            }
+
+            while(true){
+                Console.Write("Insira o código postal: ");
+                string postal = Console.ReadLine();
+                if(!string.IsNullOrWhiteSpace(postal))
+                    break;
+            }
+
+            while(true){
+                Console.Write("Insira a localidade: ");
+                string city = Console.ReadLine();
+                if(!string.IsNullOrWhiteSpace(city))
+                    break;
+            }
+
+            while(true){
+                Console.Write("Insira o número de telefone: ");
+                string phone = Console.ReadLine();
+                if(!string.IsNullOrWhiteSpace(phone))
+                    break;
+            }
+
+            while(true){
+                Console.Write("Insira o email: ");
+                string email = Console.ReadLine();
+                if(!string.IsNullOrWhiteSpace(email))
+                    break;
+            }
+
+            while(true){
+                Console.Write("Insira o código postal: ");
+                string postal = Console.ReadLine();
+                if(!string.IsNullOrWhiteSpace(postal))
+                    break;
+            }
+
+            while(true){
+                Console.Write("Insira o número de contribuinte: ");
+                if(int.TryParse(Console.ReadLine(), out int vat))
+                    break;   
+            }
+
+            int ID = clients.Count+1;
+
+            float credit = 0;
+
+            DateTime expiry = DateTime.Now;
+
+
             return true;
         }
 
