@@ -15,13 +15,21 @@ namespace ClientManagmentSystem
         
 
         
+
+
+
+
+        // include option to filter operations bu DateTime (options 8 & 9 on the Menu)
+
+
+        private string CLIENTS_FILE = "clients.csv";
         // All client info is stored in a clients.csv file
             //one line per client
             // ';' separator for fields
             // ClientID;Active;Name;Address;PostalCode;City;Phone;Email;VAT;Credit;LastPayment
 
 
-
+        private string BALANCE_SHEET = "balance.csv";
         // All operations are stored in a adicional file called balance.csv
             // A client can charge his trip pass with payments, the minimum amount is 5€
             // the credit on the pass is never lost, but can only be used if a payment has been made within 30 days of last one
@@ -32,12 +40,6 @@ namespace ClientManagmentSystem
             //2;20/08/2022 15:14:13;10.00
             //2;21/08/2022 10:44:31;-1.50
             //2;22/08/2022 10:44:31;-2.50
-
-        // include option to filter operations bu DateTime (options 8 & 9 on the Menu)
-
-
-        private string CLIENTS_FILE = "clients.csv";
-        private string BALANCE_SHEET = "balance.csv";
 
         public List<Client>? LoadList(){
             //read file with all client info for import
