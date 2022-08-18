@@ -13,21 +13,21 @@ namespace ClientManagmentSystem
         //Client ID -> array index +1
         public int ClientID{get; private set;}
         // Active client bool field
-        public bool Active{get; private set;}
+        public bool Active{get; set;}
         //Name
-        public string Name{get; private set;}
+        public string Name{get; set;}
         //Address
-        public string Address{get; private set;}
+        public string Address{get;  set;}
         //Postal code
-        public string Postal{get; private set;}
+        public string Postal{get;  set;}
         //City
-        public string Locale{get; private set;}
+        public string Locale{get;  set;}
         //Phone number
-        public string Phone{get; private set;}
+        public string Phone{get;  set;}
         //Email
-        public string Email{get; private set;}
+        public string Email{get;  set;}
         //VAT number
-        public string Vat{get; private set;}
+        public string Vat{get;  set;}
 
         //Current credit
         public float Credit{get; private set;}

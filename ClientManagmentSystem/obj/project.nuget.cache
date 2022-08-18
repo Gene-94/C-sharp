@@ -1,12 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "EXGQk8v7LNa0vcAWjLCTUHg3XNK0J4qxYEmdNbsD9t7Qp5KzBidVq8xKSNdWAdMpje9aQxWOTnctaBTTHs1u1A==",
+  "dgSpecHash": "yQjhhTgQWzG3w4it9YM0rc1s0p9ZoQUKV4xAWYH/H3rKIbNNeADuc3M5RtxhEl6uPZUHu0oxQjcM1mKq0fGlAQ==",
   "success": true,
   "projectFilePath": "/home/yevheniy/Programas/C#/ClientManagmentSystem/ClientManagmentSystem.csproj",
-  "expectedPackageFiles": [
-    "/home/yevheniy/.nuget/packages/microsoft.netcore.app.ref/6.0.7/microsoft.netcore.app.ref.6.0.7.nupkg.sha512",
-    "/home/yevheniy/.nuget/packages/microsoft.aspnetcore.app.ref/6.0.7/microsoft.aspnetcore.app.ref.6.0.7.nupkg.sha512",
-    "/home/yevheniy/.nuget/packages/microsoft.netcore.app.host.linux-x64/6.0.7/microsoft.netcore.app.host.linux-x64.6.0.7.nupkg.sha512"
-  ],
+  "expectedPackageFiles": [],
   "logs": []
 }

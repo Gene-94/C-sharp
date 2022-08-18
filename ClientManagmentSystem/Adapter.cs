@@ -9,12 +9,9 @@ namespace ClientManagmentSystem
 {
     public class Adapter
     {
-        //read file with all client info for import
 
 
-        //write to file with client info for update
-        //probably best to simply rewrite the whole file based on object list
-        //commit changes to file after each change
+        
         
 
         
@@ -40,8 +37,11 @@ namespace ClientManagmentSystem
 
 
         private string CLIENTS_FILE = "clients.csv";
+        private string BALANCE_SHEET = "balance.csv";
 
         public List<Client>? LoadList(){
+            //read file with all client info for import
+            
             // return a complete client list loaded from csv file     
             List<Client>? storedClients = new List<Client>();
 
@@ -92,6 +92,9 @@ namespace ClientManagmentSystem
 
 
         public void Save(List<Client> clientList){
+            //write to file with client info for update
+            //simply rewrite the whole file based on object list
+            //commit changes to file after each change
             
             StreamWriter writer = new StreamWriter(CLIENTS_FILE, false);
             foreach (Client client in clientList){
@@ -103,6 +106,8 @@ namespace ClientManagmentSystem
             }
             writer.Close();
         }
+
+
 
     }
 }

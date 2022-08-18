@@ -73,9 +73,15 @@ class Program
                     break;
                 case "5":
                     // Add a new client
-                    
+                    clients.AddClient();
                     break;
-            // Remove a client (make inactive)
+                case "6":
+                    // Remove a client (make inactive)
+                    clients.DeactivateClient();
+                    break;
+                case "7":
+                    clients.EditClient();
+                    break;
             // Edit a client
             // List a clients balance sheet
                 //show:
