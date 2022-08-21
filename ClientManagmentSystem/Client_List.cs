@@ -304,6 +304,7 @@ namespace ClientManagmentSystem
 
         public void ListTrips(){
             // List all payments made by a client
+            
 
         }
 
@@ -321,47 +322,72 @@ namespace ClientManagmentSystem
             Console.WriteLine($"A viagem tem um custo de {price}");
             if(client.Credit<price){
                 Console.WriteLine($"{client.Name} não têm saldo suficiente, falta {price-client.Credit:C} para poder fazer a viagem.\n");
-                ProposeRecharge();
+                ProposeRecharge(client);
                 
             }
             else if(client.CreditExpiry < DateTime.Now){
                 Console.WriteLine($"A validade do passe de {client.Name} expirou a {client.CreditExpiry}, para voltar a usufruir dos {client.Credit:C} restantes recarregue o passe.");
-                ProposeRecharge();
+                ProposeRecharge(client);
             }
             else{
-                client.Credit = client.Credit - price;
+                client.Credit = client.Credit -price;
                 Console.Write($"Foram debitados {price:C} do passe, {client.Name} tem {client.Credit:C} restantes no cartão, validos até {client.CreditExpiry}");
                 //save operation
+                Save(client, -price);
                 //update client record
                 Save();
 
             }
         }
 
-        private void ProposeRecharge(){
+        private void ProposeRecharge(Client client){
             string? op;
-                for(int i=0; i<3; i++){
-                    Console.Write("Deseja realizar um carregamento?\n(s/n) >> ");
-                    op = Console.ReadLine();
-                    if(!string.IsNullOrWhiteSpace(op) && (op.ToLower() == "s" || op.ToLower() == "sim")){
-                        AddCredit();
-                        Trip(client);
-                    }
-                    else if(!string.IsNullOrWhiteSpace(op) && (op.ToLower() == "n" || op.ToLower() == "não")){
-                        break;
-                    }
-                    Console.WriteLine("Oops... Isso quer dizer sim ou não ??\n");
+            for(int i=0; i<3; i++){
+                Console.Write("Deseja realizar um carregamento?\n(s/n) >> ");
+                op = Console.ReadLine();
+                if(!string.IsNullOrWhiteSpace(op) && (op.ToLower() == "s" || op.ToLower() == "sim")){
+                    AddCredit(client);
+                    Trip(client);
                 }
-                Console.WriteLine("De momento não é possível realizar a viagem, recarregue o passe e tente novamente.");
+                else if(!string.IsNullOrWhiteSpace(op) && (op.ToLower() == "n" || op.ToLower() == "não")){
+                    break;
+                }
+                Console.WriteLine("Oops... Isso quer dizer sim ou não ??\n");
+            }
+            Console.WriteLine("De momento não é possível realizar a viagem, recarregue o passe e tente novamente.");
         }
 
-        public void AddCredit(){
+        public void AddCredit(Client? client=null){
             // Add credit to trip pass
-
+            if(client is null)
+                if((client = validateID()) is null)
+                    return;
+            while(true){
+                Console.WriteLine($"Insira o valor que deseja creditar no passe de {client.Name} (montante mínimo de 5€).");
+                Console.Write("valor >> ");
+                if((float.TryParse(Console.ReadLine(), out float credit)) && credit>=5){
+                    client.Credit = client.Credit + credit;
+                    client.CreditExpiry = DateTime.Now.AddDays(30);
+                    Save(client, credit);
+                    Save();
+                }else{
+                    Console.WriteLine("Valor inserido não é valido...");
+                }
+            }
         }
 
 
-
+        public void Save(){
+            //commit changes to file after each change
+            if(clients!=null)
+                file.SaveClients(clients);
+        }
+        public void Save(Client client, float amount){
+            //commit changes to file after each change
+            if(clients!=null){
+                file.SaveOperation(client, amount, DateTime.Now);
+            }
+        }
 
         // # Extra #   (nice to have)
 
@@ -379,11 +405,6 @@ namespace ClientManagmentSystem
         }
 
 
-        public void Save(){
-            //commit changes to file after each change
-            if(clients!=null)
-                file.Save(clients);
-        }
 
 
 

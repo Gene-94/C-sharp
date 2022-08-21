@@ -93,7 +93,7 @@ namespace ClientManagmentSystem
         }
 
 
-        public void Save(List<Client> clientList){
+        public void SaveClients(List<Client> clientList){
             //write to file with client info for update
             //simply rewrite the whole file based on object list
             //commit changes to file after each change
@@ -107,6 +107,25 @@ namespace ClientManagmentSystem
                 writer.WriteLine(buff);
             }
             writer.Close();
+        }
+
+        public void SaveOperation(Client client, float amount, DateTime date){
+            StreamWriter writer = new StreamWriter(BALANCE_SHEET, true);
+            string line = client.ClientID+";"+date+";"+amount;
+            writer.WriteLine(line);
+            writer.Close();
+        }
+
+        public IEnumerable<string>? ReadBalanceSheet(){
+            IEnumerable<string>? balance=null;
+            try{
+                balance = File.ReadLines(BALANCE_SHEET);
+            }
+            catch (Exception){
+                Console.WriteLine($"something went wrong when writing to {Path.GetFileName(BALANCE_SHEET)}");
+            }
+
+            return balance;
         }
 
 

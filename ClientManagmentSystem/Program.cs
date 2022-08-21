@@ -80,9 +80,9 @@ class Program
                     clients.DeactivateClient();
                     break;
                 case "7":
+                    // Edit a client
                     clients.EditClient();
                     break;
-            // Edit a client
             // List a clients balance sheet
                 //show:
                 //Client Id
