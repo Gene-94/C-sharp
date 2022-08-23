@@ -16,11 +16,11 @@ class Program
             2- Listar clientes ativos com saldo disponível
             3- Listar clientes ativos com data de validade expirada
             4- Informações detalhadas de cliente
-            5- adicionar novo cliente
+            5- Adicionar novo cliente
             6- Eliminar cliente
             7- Editar cliente
             8- Listar carregamentos de um cliente
-            9- listar consumos de um cliente
+            9- Listar consumos de um cliente
             10- Adicionar viagem (consumo)
             11- Adicionar carregamento
 
@@ -83,27 +83,45 @@ class Program
                     // Edit a client
                     clients.EditClient();
                     break;
-            // List a clients balance sheet
-                //show:
-                //Client Id
-                //Name
-                //DateTime for operation
-                //Amount (+ for charging the trip pass, - for trip made, thus amount debited from trip pass)
-            // Add a trip to a client
-                //show:
-                //Client ID (?)
-                //Client Name (?) 
-                //Trip cost
-                //DateTime of the charge for the trip
-            // Add credit to trip pass
-                //Client ID (?)
-                //Client Name (?) 
-                //Amount paid by the client
-                //DateTime of the payment
+                case "8":
+                    // List all payments made by a client to charge his pass
+                    clients.ListPayments();
+                    break;
+                case "9":
+                    // List all trips made by a client
+                    clients.ListTrips();
+                    break;
+                case "10":
+                    // Add a trip to a client
+                        //show:
+                        //Client ID (?)
+                        //Client Name (?) 
+                        //Trip cost
+                        //DateTime of the charge for the trip
+                    clients.Trip();
+                    break;
+                case "11":
+                    // Add credit to trip pass
+                        //Client ID (?)
+                        //Client Name (?) 
+                        //Amount paid by the client
+                        //DateTime of the payment
+                    clients.AddCredit();
+                    break;
                 case "0":
+                    clients.Save();
                     return;
                 case "list all":
                     clients.ListAll();
+                    break;
+                case "all operations":
+                    // List a clients balance sheet
+                        //show:
+                        //Client Id
+                        //Name
+                        //DateTime for operation
+                        //Amount (+ for charging the trip pass, - for trip made, thus amount debited from trip pass)
+                    clients.ListBalance();
                     break;
                 default:
                     //Invalid option message

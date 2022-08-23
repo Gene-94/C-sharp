@@ -10,16 +10,7 @@ namespace ClientManagmentSystem
     public class Adapter
     {
 
-
-        
-        
-
-        
-
-
-
-
-        // include option to filter operations bu DateTime (options 8 & 9 on the Menu)
+        // include option to filter operations by DateTime (options 8 & 9 on the Menu)
 
 
         private string CLIENTS_FILE = "clients.csv";
@@ -58,7 +49,7 @@ namespace ClientManagmentSystem
                         credExp = DateTime.MinValue;
                     storedClients.Add(new Client(
                         int.Parse(tokens[0]),
-                        tokens[1]=="true",
+                        tokens[1].ToLower()=="true",
                         tokens[2],
                         tokens[3],
                         tokens[4],
@@ -111,21 +102,44 @@ namespace ClientManagmentSystem
 
         public void SaveOperation(Client client, float amount, DateTime date){
             StreamWriter writer = new StreamWriter(BALANCE_SHEET, true);
-            string line = client.ClientID+";"+date+";"+amount;
+            string line = client.ClientID+";"+date+";"+amount.ToString(CultureInfo.InvariantCulture);
             writer.WriteLine(line);
             writer.Close();
         }
 
-        public IEnumerable<string>? ReadBalanceSheet(){
-            IEnumerable<string>? balance=null;
+        public void ReadBalance(Client client, string type){
             try{
-                balance = File.ReadLines(BALANCE_SHEET);
+                Console.WriteLine($"--- Todos {((type=="all")?"os movimentos":"")}{((type=="trips")?"as viagens":"")}{((type=="payments")?"os pagamentos":"")} feitos por {client.Name} ------------\n");
+                //Console.WriteLine($"(ID de cliente: {client.ClientID})\n");
+                bool any = false;
+                foreach (string line in File.ReadLines(BALANCE_SHEET)){
+                    string[] tokens = line.Split(';');
+                    if(client.ClientID==int.Parse(tokens[0])){
+                        float val = float.Parse(tokens[2], CultureInfo.InvariantCulture.NumberFormat);
+                        if(type=="all"){
+                            Console.WriteLine($"  > {(val>0?"+":"")}{val:c} a {tokens[1]}");
+                            any=true;
+                        }
+                        else if(type=="trips"){
+                            if(val<0){
+                                Console.WriteLine($"  > viagem de {Math.Abs(val):c} a {tokens[1]}");
+                                any=true;
+                            }
+                        }
+                        else if(type=="payments"){
+                            if(val>0){
+                                Console.WriteLine($"  > carregamento de {Math.Abs(val):c} a {tokens[1]}");
+                                any=true;
+                            }
+                        }
+                    }
+                }
+                if(!any)
+                    Console.WriteLine($"    * este cliente ainda não tem {((type=="all")?"movimentos":"")}{((type=="trips")?"viagens":"")}{((type=="payments")?"pagamentos":"")} para apresentar *");
             }
             catch (Exception){
-                Console.WriteLine($"something went wrong when writing to {Path.GetFileName(BALANCE_SHEET)}");
+                Console.WriteLine($"Ocorreu um erro ao acessar a {Path.GetFileName(BALANCE_SHEET)}");
             }
-
-            return balance;
         }
 
 
