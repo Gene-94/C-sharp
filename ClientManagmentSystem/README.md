@@ -22,9 +22,13 @@ A client can charge his trip pass with payments, the minimum amount is 5€, the
 
 Ex:
 ClientID;operation DateTime;Amount
+
 1;10/08/2022 22:33:55;-1.10
+
 2;20/08/2022 15:14:13;10.00
+
 2;21/08/2022 10:44:31;-1.50
+
 2;22/08/2022 10:44:31;-2.50
 
     The negative amount refers to trip made, while the positive to a payment made to get credit on the trip pass.
